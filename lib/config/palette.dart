@@ -5,6 +5,8 @@ class Palette {
 
   static const Color facebookBlue = Color(0xFF1777F2);
 
+  static const Color facebookGrey = Color(0xFFEEEEEE);
+
   static const LinearGradient createRoomGradient = LinearGradient(
     colors: [Color(0xFF496AE1), Color(0xFFCE48B1)],
   );
