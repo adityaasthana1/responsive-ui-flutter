@@ -6,6 +6,7 @@ import 'package:responsive_ui/config/text_styles.dart';
 import 'package:responsive_ui/data/data.dart';
 import 'package:responsive_ui/widgets/create_post_container.dart';
 import 'package:responsive_ui/widgets/icon_button_appbar.dart';
+import 'package:responsive_ui/widgets/post_card.dart';
 import 'package:responsive_ui/widgets/rooms_widget.dart';
 import 'package:responsive_ui/widgets/stories_home.dart';
 
@@ -55,13 +56,9 @@ class HomePage extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  return Container(
-                    color: Colors.orange,
-                    height: 20,
-                    margin: const EdgeInsets.all(10),
-                  );
+                  return PostCard(post :  posts[index]);
                 },
-                childCount: 40,
+                childCount: posts.length,
               ),
             )
           ],
