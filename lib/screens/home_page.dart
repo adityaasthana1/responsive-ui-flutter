@@ -7,6 +7,7 @@ import 'package:responsive_ui/data/data.dart';
 import 'package:responsive_ui/widgets/create_post_container.dart';
 import 'package:responsive_ui/widgets/icon_button_appbar.dart';
 import 'package:responsive_ui/widgets/post_card.dart';
+import 'package:responsive_ui/widgets/responsive.dart';
 import 'package:responsive_ui/widgets/rooms_widget.dart';
 import 'package:responsive_ui/widgets/stories_home.dart';
 
@@ -22,20 +23,21 @@ class HomePage extends StatelessWidget {
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            SliverAppBar(
-              elevation: 10,
-              backgroundColor: Colors.white,
-              title: Text(
-                "ResponsiveX",
-                style: faceBookText,
+            if (!Responsive.isDesktop(context))
+              SliverAppBar(
+                elevation: 10,
+                backgroundColor: Colors.white,
+                title: Text(
+                  "ResponsiveX",
+                  style: faceBookText,
+                ),
+                centerTitle: false,
+                floating: true,
+                actions: const [
+                  AppBarIconButton(iconData: Icons.search),
+                  AppBarIconButton(iconData: MdiIcons.facebookMessenger)
+                ],
               ),
-              centerTitle: false,
-              floating: true,
-              actions: const [
-                AppBarIconButton(iconData: Icons.search),
-                AppBarIconButton(iconData: MdiIcons.facebookMessenger)
-              ],
-            ),
             SliverToBoxAdapter(
               child: CreatePostContainer(currentUser: currentUser),
             ),
