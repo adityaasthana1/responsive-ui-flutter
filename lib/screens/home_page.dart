@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           slivers: [
             SliverAppBar(
+              elevation: 10,
               backgroundColor: Colors.white,
               title: Text(
                 "ResponsiveX",
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  return PostCard(post :  posts[index]);
+                  return PostCard(post: posts[index]);
                 },
                 childCount: posts.length,
               ),

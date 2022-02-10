@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/config/constants.dart';
 import 'package:responsive_ui/config/palette.dart';
 import 'package:responsive_ui/screens/home_page.dart';
+import 'package:responsive_ui/screens/nav_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,14 +24,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Palette.scaffold,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+        fontFamily: GoogleFonts.inter().fontFamily,
       ),
       home: AnnotatedRegion(
         value: SystemUiOverlayStyle(
           statusBarColor: Colors.white,
           statusBarIconBrightness: Brightness.dark,
         ),
-        child: HomePage(),
+        child: NavScreen(),
       ),
     );
   }
