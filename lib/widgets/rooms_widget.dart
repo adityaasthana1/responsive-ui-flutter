@@ -30,6 +30,7 @@ class RoomsWidget extends StatelessWidget {
             height: 50,
             color: Colors.white,
             child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
               padding:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
               scrollDirection: Axis.horizontal,

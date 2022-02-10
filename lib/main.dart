@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_ui/config/constants.dart';
 import 'package:responsive_ui/config/palette.dart';
@@ -24,7 +25,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Palette.scaffold,
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
-      home: HomePage(),
+      home: AnnotatedRegion(
+        value: SystemUiOverlayStyle(
+          statusBarColor: Colors.white,
+          statusBarIconBrightness: Brightness.dark,
+        ),
+        child: HomePage(),
+      ),
     );
   }
 }

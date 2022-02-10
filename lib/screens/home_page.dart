@@ -7,6 +7,7 @@ import 'package:responsive_ui/data/data.dart';
 import 'package:responsive_ui/widgets/create_post_container.dart';
 import 'package:responsive_ui/widgets/icon_button_appbar.dart';
 import 'package:responsive_ui/widgets/rooms_widget.dart';
+import 'package:responsive_ui/widgets/stories_home.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
             SliverAppBar(
               backgroundColor: Colors.white,
@@ -36,9 +38,30 @@ class HomePage extends StatelessWidget {
               child: CreatePostContainer(currentUser: currentUser),
             ),
             SliverPadding(
-              padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
+              padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
               sliver: SliverToBoxAdapter(
                 child: RoomsWidget(onlineUsers: onlineUsers),
+              ),
+            ),
+            SliverPadding(
+              padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+              sliver: SliverToBoxAdapter(
+                child: StoryBoard(
+                  currentUser: currentUser,
+                  stories: stories,
+                ),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return Container(
+                    color: Colors.orange,
+                    height: 20,
+                    margin: const EdgeInsets.all(10),
+                  );
+                },
+                childCount: 40,
               ),
             )
           ],
