@@ -6,6 +6,7 @@ import 'package:responsive_ui/config/text_styles.dart';
 import 'package:responsive_ui/data/data.dart';
 import 'package:responsive_ui/widgets/create_post_container.dart';
 import 'package:responsive_ui/widgets/icon_button_appbar.dart';
+import 'package:responsive_ui/widgets/rooms_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,6 +35,12 @@ class HomePage extends StatelessWidget {
             SliverToBoxAdapter(
               child: CreatePostContainer(currentUser: currentUser),
             ),
+            SliverPadding(
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
+              sliver: SliverToBoxAdapter(
+                child: RoomsWidget(onlineUsers: onlineUsers),
+              ),
+            )
           ],
         ),
       ),
