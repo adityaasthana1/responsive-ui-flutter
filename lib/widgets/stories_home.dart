@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/config/palette.dart';
 import 'package:responsive_ui/models/models.dart';
+import 'package:responsive_ui/widgets/responsive.dart';
 import 'package:responsive_ui/widgets/rooms_widget.dart';
 
 class StoryBoard extends StatelessWidget {
@@ -15,7 +16,7 @@ class StoryBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 170,
-      color: Colors.white,
+      color: Responsive.isDesktop(context) ? Colors.transparent : Colors.white,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,

@@ -93,6 +93,7 @@ class CreatePostOptionButton extends StatelessWidget {
           Icon(
             iconData,
             color: colorAccent,
+            size: 15,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
@@ -100,7 +101,7 @@ class CreatePostOptionButton extends StatelessWidget {
               text,
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.normal,
               ),
             ),
