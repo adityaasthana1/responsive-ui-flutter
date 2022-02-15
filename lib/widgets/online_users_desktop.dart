@@ -30,7 +30,7 @@ class OnlineUserDesktopHome extends StatelessWidget {
             Text(userName,
             style: const TextStyle(
               fontSize: 14,
-    
+              color: Colors.white
             ),)
           ],
         ),

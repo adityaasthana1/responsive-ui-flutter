@@ -20,6 +20,7 @@ class SideOptionDesktopHome extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: InkWell(
+        splashColor: Palette.darkSecondaryBackground,
         onTap: () => ontap,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -30,7 +31,7 @@ class SideOptionDesktopHome extends StatelessWidget {
                   Icon(
                     iconData,
                     size: 24,
-                    color: Palette.facebookBlue,
+                    color: Palette.darkAccentColor,
                   ),
                   addHorizontalSpace(10),
                   Text(
@@ -38,7 +39,7 @@ class SideOptionDesktopHome extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.normal,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ],

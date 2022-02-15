@@ -28,7 +28,7 @@ class RoomsWidget extends StatelessWidget {
         Expanded(
           child: Container(
             height: 50,
-            color: Colors.white,
+            color: Palette.darkSecondaryBackground,
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               padding:
@@ -115,12 +115,12 @@ class _CreateRoomButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.0),
       ),
-      color: Colors.white,
+      color: Palette.darkBackground,
       borderSide: const BorderSide(
         width: 3.0,
-        color: Palette.facebookBlue,
+        color: Colors.white,
       ),
-      textColor: Palette.facebookBlue,
+      textColor: Colors.white,
       child: Row(
         children: const [
           // ShaderMask(
@@ -135,12 +135,12 @@ class _CreateRoomButton extends StatelessWidget {
           Icon(
             Icons.video_call,
             size: 25.0,
-            color: Colors.purple,
+            color: Colors.white,
           ),
           SizedBox(width: 4.0),
           Text(
-            'Create\nRoom',
-            style: TextStyle(fontSize: 10, wordSpacing: -1),
+            'Room',
+            style: TextStyle(fontSize: 10, wordSpacing: -1, color: Colors.white),
           ),
         ],
       ),

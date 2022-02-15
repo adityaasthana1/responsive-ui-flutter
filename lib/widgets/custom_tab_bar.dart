@@ -24,7 +24,7 @@ class CustomTabBar extends StatelessWidget {
           ? const BoxDecoration(
               border: Border(
                 bottom: BorderSide(
-                  color: Palette.facebookBlue,
+                  color: Palette.darkAccentColor,
                   width: 2,
                 ),
               ),
@@ -32,7 +32,7 @@ class CustomTabBar extends StatelessWidget {
           : const BoxDecoration(
               border: Border(
                 top: BorderSide(
-                  color: Palette.facebookBlue,
+                  color: Palette.darkAccentColor,
                   width: 2,
                 ),
               ),
@@ -45,7 +45,7 @@ class CustomTabBar extends StatelessWidget {
                   icon: Icon(
                 e,
                 color:
-                    i == selectedIndex ? Palette.facebookBlue : Colors.black45,
+                    i == selectedIndex ? Palette.darkAccentColor : Colors.white,
               ))))
           .values
           .toList(),

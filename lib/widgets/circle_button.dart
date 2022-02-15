@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_ui/config/palette.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData icon;
@@ -17,13 +18,13 @@ class CircleButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Palette.darkSecondaryBackground,
         shape: BoxShape.circle,
       ),
       child: IconButton(
         icon: Icon(icon),
         iconSize: iconSize,
-        color: Colors.black,
+        color: Colors.white,
         onPressed: onPressed,
       ),
     );

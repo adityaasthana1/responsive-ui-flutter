@@ -47,7 +47,7 @@ class _HomePageMobile extends StatelessWidget {
         if (!Responsive.isDesktop(context))
           SliverAppBar(
             elevation: 10,
-            backgroundColor: Colors.white,
+            backgroundColor: Palette.darkSecondaryBackground,
             title: Text(
               "ResponsiveX",
               style: faceBookText,
@@ -63,7 +63,7 @@ class _HomePageMobile extends StatelessWidget {
           child: CreatePostContainer(currentUser: currentUser),
         ),
         SliverPadding(
-          padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+          padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
           sliver: SliverToBoxAdapter(
             child: RoomsWidget(onlineUsers: onlineUsers),
           ),
@@ -150,9 +150,7 @@ class _HomePageDesktop extends StatelessWidget {
                 ),
               ),
               SliverToBoxAdapter(
-                child: Material(
-                  child: CreatePostContainer(currentUser: currentUser),
-                ),
+                child: CreatePostContainer(currentUser: currentUser),
               ),
               SliverPadding(
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -176,7 +174,7 @@ class _HomePageDesktop extends StatelessWidget {
           flex:2,
           child: Container(
             padding: const EdgeInsets.all(20),
-            color: Colors.white,
+            color: Palette.darkSecondaryBackground,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -185,6 +183,7 @@ class _HomePageDesktop extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white
                   ),
                 ),
                 addVerticalSpace(10),

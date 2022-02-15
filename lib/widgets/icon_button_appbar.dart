@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_ui/config/palette.dart';
 
 class AppBarIconButton extends StatelessWidget {
   final IconData iconData;
@@ -9,15 +10,15 @@ class AppBarIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(6),
-      decoration: BoxDecoration(
-        color: Colors.grey[200],
+      decoration: const BoxDecoration(
+        color: Palette.darkBackground,
         shape: BoxShape.circle,
       ),
       child: IconButton(
         onPressed: () {},
         icon: Icon(
           iconData,
-          color: Colors.black,
+          color: Colors.white,
         ),
         iconSize: 24,
       ),

@@ -18,7 +18,7 @@ class PostCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 5),
       padding: const EdgeInsets.symmetric(vertical: 10),
-      color: Colors.white,
+      color: Palette.darkSecondaryBackground,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -35,13 +35,13 @@ class PostCard extends StatelessWidget {
                     children: [
                       Text(
                         post.user.name,
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
                       ),
                       Row(
                         children: [
                           Text(
                             "${post.timeAgo}  •  ",
-                            style: TextStyle(fontSize: 12, color: COLOR_GREY),
+                            style: TextStyle(fontSize: 12, color: Colors.white),
                           ),
                           Icon(Icons.public, color: Colors.grey[200], size: 16),
                         ],
@@ -52,7 +52,7 @@ class PostCard extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.more_horiz),
-                  color: Colors.black,
+                  color: Colors.white,
                 )
               ],
             ),
@@ -64,6 +64,7 @@ class PostCard extends StatelessWidget {
               post.caption,
               style: TextStyle(
                 fontSize: 14,
+                color: Colors.white
               ),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
@@ -90,13 +91,13 @@ class PostCard extends StatelessWidget {
                       size: 14,
                     ),
                     addHorizontalSpace(5),
-                    Text("${post.likes} likes"),
+                    Text("${post.likes} likes", style: TextStyle(color: Colors.white),),
                   ],
                 ),
                 Row(
                   children: [
-                    Text("${post.comments} comments • "),
-                    Text("${post.shares} shares"),
+                    Text("${post.comments} comments • ", style: TextStyle(color: Colors.white,),),
+                    Text("${post.shares} shares", style: TextStyle(color: Colors.white),),
                   ],
                 ),
               ],

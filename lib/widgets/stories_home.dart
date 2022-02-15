@@ -16,7 +16,7 @@ class StoryBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 170,
-      color: Responsive.isDesktop(context) ? Colors.transparent : Colors.white,
+      color: Responsive.isDesktop(context) ? Colors.transparent : Palette.darkSecondaryBackground,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
@@ -84,7 +84,7 @@ class StoryCard extends StatelessWidget {
                       height: 40.0,
                       width: 40.0,
                       decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: Palette.darkSecondaryBackground,
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(

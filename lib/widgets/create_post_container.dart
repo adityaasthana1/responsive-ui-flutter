@@ -15,7 +15,7 @@ class CreatePostContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
-      color: Colors.white,
+      color: Palette.darkSecondaryBackground,
       child: Column(
         children: [
           Row(
@@ -29,9 +29,13 @@ class CreatePostContainer extends StatelessWidget {
               addHorizontalSpace(12),
               const Expanded(
                 child: TextField(
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: 14,color: Colors.white),
                   decoration: InputDecoration.collapsed(
                     hintText: "What\'s on your mind?",
+                    hintStyle: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white
+                    )
                   ),
                 ),
               )
@@ -84,7 +88,7 @@ class CreatePostOptionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Palette.darkSecondaryBackground,
         borderRadius: BorderRadius.circular(20),
       ),
       padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -100,7 +104,7 @@ class CreatePostOptionButton extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
               ),

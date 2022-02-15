@@ -23,13 +23,13 @@ class MyApp extends StatelessWidget {
       title: 'ResponsiveX',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Palette.scaffold,
+        scaffoldBackgroundColor: Palette.darkBackground,
         fontFamily: GoogleFonts.inter().fontFamily,
       ),
       home: AnnotatedRegion(
         value: SystemUiOverlayStyle(
-          statusBarColor: Colors.white,
-          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: Palette.darkSecondaryBackground,
+          statusBarIconBrightness: Brightness.light,
         ),
         child: NavScreen(),
       ),
